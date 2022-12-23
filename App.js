@@ -1,5 +1,5 @@
 
-
+import "react-native-gesture-handler";
 import React, { useState,useEffect } from 'react';
 import { Text,TextInput, View,Button,Image,Alert,TouchableOpacity ,SafeAreaView,Keyboard ,ScrollView,StyleSheet } from 'react-native';
 
@@ -32,8 +32,10 @@ return(
 <View style={{marginTop:390,color: 'white', backgroundColor:'#5C6B9C' ,flexDirection:"row"}}>
 
 
-<Image  style={styles.image} source={require("./assets/icon2.png")}/>
-<Text style={{  justifyContent: 'center', alignItems: 'center',color: 'white',fontSize:50,  }}>Sweetloan</Text> 
+<Image  style={styles.image} source={require("./Assets/icon2.png")}/>
+<Text style={{  justifyContent: 'center', alignItems: 'center',color: 'white',fontSize:50,}}>
+Sweetloan
+</Text> 
 </View>
 <View style={{marginTop:490,color: 'white', backgroundColor:'#5C6B9C' }}/>
 
@@ -115,7 +117,7 @@ function reg (value){
   
   
    <Text style={{  justifyContent: 'center', alignItems: 'center',color: 'white',marginTop:15 }}>
-     Email{email}
+     Email {email}
     </Text>
    <TextInput title= "Email"
       
@@ -230,7 +232,7 @@ function Logins({navigation}){
   style={{ color: 'puple',borderWidth:4,borderradius:4,borderColor:'white' }}
   onChangeText={(val)=>setemail(val)} placeholderTextColor="white"
    underlineColorAndroid="transparent"
-  autoCorrect='true'/>
+  autoCorrect/>
   <Text>{name} {token}</Text>
   <Text style={{  justifyContent: 'center', alignItems: 'center',color: 'gold' }}>
       Password
@@ -240,9 +242,9 @@ function Logins({navigation}){
     placeholder="Enter password"
   style={{ color: 'puple',borderWidth:4,borderradius:4,borderColor:'white' }}
   onChangeText={(val)=>setpass(val)} placeholderTextColor="white"
-  autoCorrect='true'
+  autoCorrect
    underlineColorAndroid="transparent"
-  secureTextEntry='true'/>
+  secureTextEntry/>
   <Text>{password}</Text>
   
   
